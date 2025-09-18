@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clone da Página Web</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .box {
+            width: 200px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid black;
+            transition: color 0.3s;
+        }
+        .box:hover {
+            color: white; // BEGIN:
+        }
+        .box1 { background-color: lightblue; }
+        .box2 { background-color: lightgreen; }
+        .box3 { background-color: lightcoral; }
+        .box4 { background-color: lightgoldenrodyellow; }
+        .box5 { background-color: lightpink; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">Div 1</div>
+        <div class="box box2">Div 2</div>
+        <div class="box box3">Div 3</div>
+        <div class="box box4">Div 4</div>
+        <div class="box box5">Div 5</div>
+    </div>
+</body>
+</html>

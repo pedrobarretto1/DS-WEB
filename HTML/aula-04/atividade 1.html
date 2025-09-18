@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> aula 04</title>
+        </head>
+    <body>
+        <h1 align="center">pagina de cadastro</h1>
+        <hr>
+        <form action="processa.php" method="post" align="center">
+            <label for="nome">Nome:</label>
+            <input type="text" maxlength="50" placeholder="Digite seu nome">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Digite seu email" email required><br>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" min="1" max="120" required>
+            <label for="password">senha:</label>
+            <input type="password" id="senha" placeholder="Digite sua senha" email required><br>
+            <input type="submit" value="Enviar">
+            
+            <hr>
+            </form>
+            
+    </body>
+</html>

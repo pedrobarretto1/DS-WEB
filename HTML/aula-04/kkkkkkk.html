@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> aula 04</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ta curioso??</title>
+        <style>
+            /* CSS para o link parecer um botão */
+            .botao-link {
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 16px;
+                font-family: sans-serif;
+                text-align: center;
+                text-decoration: none; /* Remove o sublinhado do link */
+                color: white;
+                background-color: #007bff; /* Cor do botão */
+                border: none;
+                border-radius: 5px; /* Bordas arredondadas */
+                cursor: pointer; /* Muda o cursor para uma "mãozinha" */
+            }
+    
+            .botao-link:hover {
+                background-color: #0056b3; /* Cor do botão ao passar o mouse */
+            }
+        </style>
+        </head>
+    <body>
+        <h1 align="center">bom dia loucuras loucas</h1>
+        <hr>
+        <form action="processa.php" method="post" align="center">
+            <label for="nome">Nome:</label>
+            <input type="text" maxlength="50" placeholder="Digite seu nome">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Digite seu email" email required><br>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" min="1" max="120" required>
+            <input type="submit" value="Enviar">
+            <h1>ta curioso é?</h1>
+
+            <a href="https://i.pinimg.com/564x/2f/c5/42/2fc5429cc937124e13e1b4ff059bc1c5.jpg" class="botao-link">
+                aperta vai
+            </a>
+            <hr>
+            </form>
+            
+    </body>
+</html>

@@ -1,92 +1,127 @@
 <?php
-class console {
-    poublic $geracao;
-    poublic $potencial;
-    poublic $cor;
-    poublic $tamanho;
-    poublic $marca;//atributo
+
+class Console {
+    public $geracao;
+    public $potencial;
+    public $cor;
+    public $tamanho;
+    public $marca;
 
     public function entretenimento(){
-        public function jogar(){
-            public function assistir(){//metodo
-
-        return "o meu  nome é" .$this->nome;
-
+        echo "Entretenimento garantido com seu console da marca: " . $this->marca . "<br>";
     }
-    }
-    }
-} 
 
-class caneta {
-    poublic $cor;
-    poublic $tamanho;
-    poublic $tinta;
-    poublic $marca;
-    poublic $recarregavel;//atributo
+    public function jogar(){
+        echo "Jogando num console de " . $this->geracao . " com potencial " . $this->potencial . "<br>";
+    }
+
+    public function assistir(){
+
+        echo "Assistindo filme no console de cor " . $this->cor . "<br>";
+    } 
+}
+
+class Caneta {
+    public $cor;
+    public $tamanho;
+    public $tinta;
+    public $marca;
+    public $recarregavel;
 
     public function escrever(){
-        public function pintar(){
-            public function brincar(){//metodo
-
-        return "o meu  nome é" .$this->nome;
-
+        echo "Escrevendo um texto na cor " . $this->cor . "<br>";
     }
-        }
-    }
-} 
 
-class caneca {
-    poublic $tamanho;
-    poublic $material;
-    poublic $ml;
-    poublic $cor;
-    poublic $utilidade;//atributo
+    public function pintar(){
+        echo "Pintando com a caneta " . $this->marca . " que usa tinta " . $this->tinta . "<br>";
+    }
+
+    public function brincar(){
+
+        echo "Girando a caneta de tamanho " . $this->tamanho . " entre os dedos.<br>";
+    }
+}
+
+class Caneca {
+    public $tamanho;
+    public $material;
+    public $ml;
+    public $cor;
+    public $utilidade;
 
     public function tomar(){
-        public function medir(){
-            public function usar(){//metodo
-
-        return "o meu  nome é" .$this->nome;
-
+        echo "Hora de " . $this->utilidade . " na caneca de " . $this->material . "<br>";
     }
-        }
+
+    public function medir(){
+        echo "Esta caneca comporta exatamente " . $this->ml . " ml.<br>";
     }
-} 
 
-class caixa de som {
-    poublic $tamanho;
-    poublic $potencia;
-    poublic $marca;
-    poublic $cor;//atributo
-    poublic $com ou sem fio;
-
-    public function tocar musica(){
-        public function divertir(){
-            public function entretenimento(){//metodo
-
-        return "o meu  nome é" .$this->nome;
-
+    public function usar(){
+        echo "Usando a caneca " . $this->cor . " para decoração.<br>";
     }
-        }
-    }
-} 
+}
 
-class janela {
-    poublic $tamanho;
-    poublic $enfeites;
-    poublic $fixa;
-    poublic $fabricante;
-    poublic $local;//atributo
+class CaixaDeSom {
+    public $tamanho;
+    public $potencia;
+    public $marca;
+    public $cor;
+    public $comOuSemFio;
+
+    public function tocarMusica(){ 
+        echo "Tocando música na potência " . $this->potencia . "!<br>";
+    }
+
+    public function divertir(){
+        echo "A caixa da " . $this->marca . " está animando a festa.<br>";
+    }
+
+    public function entretenimento(){
+        echo "Entretenimento " . $this->comOuSemFio . " na cor " . $this->cor . "<br>";
+    }
+}
+
+class Janela {
+    public $tamanho;
+    public $enfeites;
+    public $fixa;
+    public $fabricante;
+    public $local;
 
     public function abrir(){
-        public function bloquear vento(){
-            public function proteger(){//metodo
-
-        return "o meu  nome é" .$this->nome;
-
+        echo "Abrindo a janela que fica na " . $this->local . "<br>";
     }
-        }
+
+    public function bloquearVento(){
+        echo "Bloqueando vento na janela de tamanho " . $this->tamanho . " (Fixa: " . $this->fixa . ")<br>";
     }
-} 
+
+    public function proteger(){
+        echo "Janela feita por " . $this->fabricante . " com enfeites: " . $this->enfeites . "<br>";
+    }
+}
+
+$canecaazul = new Caneca();
+$canecaazul->tamanho = "Médio";
+$canecaazul->material = "ceramica";
+
+$canetapreta = new Caneta();
+$canetapreta-> cor = "preta";
+$canetapreta->tinta = "azul";
+
+$consoleps5 = new Console();
+$consoleps5->geracao = "9 geração";
+$consoleps5->potencial = "alto";
+
+$caixadesom = new CaixaDeSom();
+$caixadesom->marca = "JBL";
+$caixadesom->potencia = "50W";
+
+$janela = new Janela();
+$janela->local = "sala de estar";
+$janela->tamanho = "grande";
+
+
 
 ?>

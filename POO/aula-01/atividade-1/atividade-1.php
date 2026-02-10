@@ -87,6 +87,21 @@ class janela {
     }
         }
     }
-} 
+}
+$consolepreto = new console();
+$consolepreto->geracao = "8° geração";
+$consolepreto->potencial = "4k";
+
+$canetaverde = new caneta();
+$canetaverde->cor = "verde";
+
+$canecabranca = new caneca();
+$canecabranca->cor = "branca";
+
+$caixadesompreta = new caixa de som();
+$caixadesompreta->cor = "preta";
+
+$janelaazul = new janela();
+$janelaazul->cor = "azul";
 
 ?>

@@ -1,26 +1,48 @@
 // Pegar o formulário
 var formulario = document.getElementById('cadastro');
+var listaElement = document.getElementById('lista');
 
-formulario.addEventListener('submit', function(evento) {
-    evento.preventDefault();
+// Usa um array para armazenar os alunos
+var alunos = [];
 
-    var nome = document.getElementById('nome').value;
-    var email = document.getElementById('email').value;
-    var registro = document.getElementById('registro').value;
-    var telefone = document.getElementById('telefone').value;
-    var turma = document.getElementById('turma').value;
+// Função que renderiza a lista de alunos no DOM a partir do array
+function renderLista() {
+    listaElement.innerHTML = '';
+    alunos.forEach(function(aluno) {
+        let li = document.createElement('li');
+        li.innerHTML = aluno.nome + '<br>' + aluno.email + '<br> ' + aluno.registro + '<br> ' + aluno.telefone + '<br>' + aluno.turma;
+        listaElement.appendChild(li);
+    });
+}
 
-    var novoAluno = document.createElement('li');
+function remover() {
+    if (alunos.length > 0) {
+        alunos.pop();
+        let lista = document.getElementById("lista");
+        lista.removeChild(lista.lastChild);
+    }}
 
-    novoAluno.textContent = nome + ' - ' + email + ' - ' + registro + ' - ' + telefone + ' - ' + turma;
+    formulario.addEventListener('submit', function(evento) {
+        evento.preventDefault();
 
-    document.getElementById('lista').appendChild(novoAluno);
+        let nome = document.getElementById('nome').value;
+        let email = document.getElementById('email').value;
+        let registro = document.getElementById('registro').value;
+        let telefone = document.getElementById('telefone').value;
+        let turma = document.getElementById('turma').value;
 
-    document.getElementById('nome').value = '';
-    document.getElementById('email').value = '';
-    document.getElementById('registro').value = '';
-    document.getElementById('telefone').value = '';
-    document.getElementById('turma').value = '';
+        // Cria um objeto aluno e adiciona ao array
+        var aluno = {
+            nome: nome,
+            email: email,
+            registro: registro,
+            telefone: telefone,
+            turma: turma
 
-    document.getElementById('nome').focus();
+        };
+
+    alunos.push(aluno);
+    renderLista();
+    document.getElementById('aluno').value = '<br>';
+
 });

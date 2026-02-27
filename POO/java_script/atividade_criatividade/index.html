@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pac-man</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <h1><center><strong>PAC-MAN</strong></center></h1>
+    <div class="cima" id="cima"></div>
+    <div class="lado1" id="lado1"></div>
+    <div class="lado2" id="lado2"></div>
+    <div class="baixo" id="baixo"></div>
+
+    <img id="pacman" src="oacmn.gif" alt="Pac-Man">
+
+    <script>
+        
+        const pacman = document.getElementById("pacman");
+        const speed = 3;
+        const threshold = 5;
+        
+
+        let mouseX = 0, mouseY = 0;
+        let currentX = 0, currentY = 0;
+        let angle = 0;
+
+        document.addEventListener("mousemove", (e) => {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animate() {
+            let dx = mouseX - currentX;
+            let dy = mouseY - currentY;
+
+            
+            if (Math.abs(dx) > threshold) {
+                currentX += Math.sign(dx) * speed;
+                angle = dx > 0 ? 0 : 180;
+            } 
+            else if (Math.abs(dy) > threshold) {
+                currentY += Math.sign(dy) * speed;
+                angle = dy > 0 ? 90 : 270;
+            }
+
+            pacman.style.transform = `translate(${currentX}px, ${currentY}px) rotate(${angle}deg)`;
+
+            requestAnimationFrame(animate);
+        }
+        
+
+        animate();
+    </script>
+</body>
+</html>

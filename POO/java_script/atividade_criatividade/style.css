@@ -1,0 +1,68 @@
+        body {
+            margin: 0;
+            background-color: #000;
+            overflow: hidden;
+            background-image: radial-gradient(circle, #222 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        #pacman {
+            width: 25px;
+            height: 25px;
+            position: absolute;
+            pointer-events: auto;
+            will-change: transform;
+            left: 25px;
+        }
+
+        @font-face {
+  font-family: 'MinhaFonte';
+  src: url('Emulogic-zrEw.ttf') format('truetype');
+}
+
+body {
+  font-family: 'MinhaFonte';
+}
+
+h1 {
+  color: rgb(215, 240, 51);
+  z-index: 1;
+}
+#cima {
+  position: absolute;
+  top: 0;
+  left: 0.1%;
+  right: 0.1%;
+  z-index: -1;
+  background-color: rgb(63, 132, 251);
+  padding: 33px 800px;
+}
+
+#lado1 {
+  position: absolute;
+  top: 650px;
+  left: 0.1%;
+  right: 0.1%;
+  z-index: 1;
+  background-color: rgb(63, 132, 251);
+  padding: 25px 800px;
+  position:fixed;
+}
+
+#lado2 {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  background-color: rgb(63, 132, 251);
+  padding: 350px 10px;
+}
+
+#baixo {
+  position: absolute;
+  top: 65px;
+  left: 1510px;
+  right: 100px;
+  z-index: 1;
+  background-color: rgb(63, 132, 251);
+  padding: 350px 800px;
+}

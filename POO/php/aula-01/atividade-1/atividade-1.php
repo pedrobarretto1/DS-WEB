@@ -1,10 +1,10 @@
 <?php
 class console {
-    poublic $geracao;
-    poublic $potencial;
-    poublic $cor;
-    poublic $tamanho;
-    poublic $marca;//atributo
+    public $geracao;
+    public $potencial;
+    public $cor;
+    public $tamanho;
+    public $marca;//atributo
 
     public function entretenimento(){
         public function jogar(){

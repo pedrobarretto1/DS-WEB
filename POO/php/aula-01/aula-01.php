@@ -12,4 +12,3 @@ class console {
 //$marcus = new pessoa();//inicio da fala
 //$marcus-> nome = "marcus ribeiro";//atribuindo um valo a um atributo
 //echo $marcus->fala();// exibir um atributo
-?>
